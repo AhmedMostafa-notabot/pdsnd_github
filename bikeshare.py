@@ -112,12 +112,14 @@ def trip_duration_stats(df):
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
-
+    
     # TO DO: display total travel time
     tottime=df['Trip Duration'].sum()
     print('Total Travel Time in seconds {} seconds\nin minutes {} minutes\nin hours {} hours\nin days {} days\n'.format(tottime,tottime/60,tottime/3600,tottime/86400))
+    
     # TO DO: display mean travel time
     meantime=df['Trip Duration'].mean()
+    
     print('Mean Travel Time in seconds {} seconds\nin minutes {} minutes\n'.format(meantime,meantime/60))
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -132,11 +134,13 @@ def user_stats(df,city):
     # TO DO: Display counts of user types
     user_types = df.groupby(['User Type'])['User Type'].count()
     print(user_types,'\n')
+    
     # TO DO: Display counts of gender
     if(city != 'washington'): 
         # Because it doesn't have gender column or Birth Year
         gender = df.groupby(['Gender'])['Gender'].count()
         print(gender,'\n')
+    
     # TO DO: Display earliest, most recent, and most common year of birth
         earlyyear=df['Birth Year'].min()
         commonyear=df['Birth Year'].mode()[0]
@@ -144,14 +148,17 @@ def user_stats(df,city):
         print('Earliest Year Of Birth: {} \nMost Recent Year Of Birth: {} \nCommon Year Of Birth:{}'.format(earlyyear,recentyear,commonyear))
     else:
         print("Sorry But Washington Data doesn't contain Gender or Birth Year Column :(")
+    
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
 def display_data(df):
+    
     view_data = input("Would you like to view 5 rows of individual trip data? Enter yes or no?\n")
     start_loc = 0
     flag=True
+    
     while (flag==True):
         print(df.iloc[start_loc:(start_loc+5)])
         start_loc += 5
