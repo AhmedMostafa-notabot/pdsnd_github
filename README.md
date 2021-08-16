@@ -20,3 +20,6 @@ This is the repo i forked: https://github.com/udacity/pdsnd_github
 
 ### About Me
 Hey! My name is Ahmed Mostafa...I'm From Egypt :)
+
+### What do i do?
+I'm an undergraduate biomedical engineering in Cairo University and I'm reaally enthusiastic about Machine Learning and Data Analysis
