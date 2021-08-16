@@ -18,3 +18,5 @@ washington.csv
 It's important to give proper credit. 
 This is the repo i forked: https://github.com/udacity/pdsnd_github
 
+### About Me
+Hey! My name is Ahmed Mostafa...I'm From Egypt :)
