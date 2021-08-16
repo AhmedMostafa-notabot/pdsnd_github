@@ -138,10 +138,10 @@ def user_stats(df,city):
         gender = df.groupby(['Gender'])['Gender'].count()
         print(gender,'\n')
     # TO DO: Display earliest, most recent, and most common year of birth
-        earlyye=df['Birth Year'].min()
-        commonye=df['Birth Year'].mode()[0]
-        recentye=df['Birth Year'].max()
-        print('Earliest Year Of Birth: {} \nMost Recent Year Of Birth: {} \nCommon Year Of Birth:{}'.format(earlyye,recentye,commonye))
+        earlyyear=df['Birth Year'].min()
+        commonyear=df['Birth Year'].mode()[0]
+        recentyear=df['Birth Year'].max()
+        print('Earliest Year Of Birth: {} \nMost Recent Year Of Birth: {} \nCommon Year Of Birth:{}'.format(earlyyear,recentyear,commonyear))
     else:
         print("Sorry But Washington Data doesn't contain Gender or Birth Year Column :(")
     print("\nThis took %s seconds." % (time.time() - start_time))
